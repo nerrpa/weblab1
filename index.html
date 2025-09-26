@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Первая лаба по веб-программированию</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    #header {
+      font-size: 18px;
+      color: blue;
+      margin-bottom: 15px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    input[type="text"] {
+      margin: 5px;
+      padding: 3px;
+      width: 60px;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="header">Зуенок Александра Романовна, Группа P3322, Вариант 345971</div>
+
+  <img class="grafik" src="areas.png" width="200" style="display:block; margin:auto;">
+
+  <form id="point-form">
+    <table>
+      <tr>
+        <td>X:</td>
+        <td>
+          <label><input type="checkbox" name="x" value="-3">-3</label>
+          <label><input type="checkbox" name="x" value="-2">-2</label>
+          <label><input type="checkbox" name="x" value="-1">-1</label>
+          <label><input type="checkbox" name="x" value="0">0</label>
+          <label><input type="checkbox" name="x" value="1">1</label>
+          <label><input type="checkbox" name="x" value="2">2</label>
+          <label><input type="checkbox" name="x" value="3">3</label>
+          <label><input type="checkbox" name="x" value="4">4</label>
+          <label><input type="checkbox" name="x" value="5">5</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Y:</td>
+        <td>
+          <input type="text" id="y" name="y" placeholder="-3 ... 3">
+        </td>
+      </tr>
+      <tr>
+        <td>R:</td>
+        <td>
+          <label><input type="radio" name="r" value="1">1</label>
+          <label><input type="radio" name="r" value="1.5">1.5</label>
+          <label><input type="radio" name="r" value="2">2</label>
+          <label><input type="radio" name="r" value="2.5">2.5</label>
+          <label><input type="radio" name="r" value="3">3</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Проверить">
+        </td>
+      </tr>
+    </table>
+    <div class="error" id="error-msg"></div>
+  </form>
+
+  <h3>Результаты:</h3>
+  <table>
+    <tr>
+      <th>X</th><th>Y</th><th>R</th><th>Попадание</th><th>Время</th><th>Время работы</th>
+    </tr>
+    <tbody id="results"></tbody>
+  </table>
+</body>
+</html>
